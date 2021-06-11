@@ -1,0 +1,36 @@
+object DMData: TDMData
+  OldCreateOrder = False
+  Height = 248
+  HorizontalOffset = 799
+  VerticalOffset = 285
+  Width = 375
+  object DBTestConn: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransactionConn
+    CheckTransactionParams = False
+    UseConnectionCharSetIfNone = False
+    Left = 96
+    Top = 65
+  end
+  object DataSetConn: TBufDataset
+    FieldDefs = <>
+    Left = 208
+    Top = 65
+  end
+  object QueryConn: TSQLQuery
+    FieldDefs = <>
+    Database = DBTestConn
+    Transaction = SQLTransactionConn
+    Params = <>
+    Left = 96
+    Top = 128
+  end
+  object SQLTransactionConn: TSQLTransaction
+    Active = False
+    Database = DBTestConn
+    Left = 208
+    Top = 128
+  end
+end
